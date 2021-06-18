@@ -1,0 +1,64 @@
+.app-header{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    box-sizing: border-box;
+    border-width: 0 0 1px 0;
+    border-color: hsl(0, 0%, 30%);
+    border-style: solid;
+    background: hsl(0, 0%, 20%);
+    display: none;
+}
+
+.app-header__logo{
+    margin-right: auto;
+    font-family: 'Monoton', cursive;
+    font-size: 40px;
+    color: hsl(156, 100%, 50%);
+}
+.app-header__tabs{
+    display: flex;
+}
+.app-header__tab{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 3px;
+    border-style: solid;
+    border-color: hsl(156, 100%, 50%);
+    color: hsl(156, 100%, 50%);
+    font-weight: 500;
+    border-radius: 5px;
+    margin-left: 15px;
+    box-sizing: border-box;
+    // border-width: 0 1px 0 0 ;
+    // border-style: solid;
+    // border-color: hsl(0, 0%, 30%);
+    background:hsl(156, 100%, 50%);
+}
+.app-header__tab--filter{
+    mask: url("../assets/tune_black_24dp.svg") no-repeat center;
+    mask-size: 40px 40px;
+}
+.app-header__tab--events{
+    mask: url("../assets/event_black_24dp.svg") no-repeat center;
+    mask-size: 40px 40px;
+}
+.app-header__tab--artists{
+    mask: url("../assets/album_black_24dp.svg") no-repeat center;
+    mask-size: 40px 40px;
+}
+.app-header__tab--account{
+
+}
+.app-header__avatar{
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    background: hsl(156, 100%, 50%);
+    border-radius: 5px;
+}

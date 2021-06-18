@@ -1,0 +1,83 @@
+.artists{
+    height: 100vh;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 30px;
+    // background-image: linear-gradient(to bottom, #333333, hsla(156, 100%, 50%, .1));
+}
+.artists__search-spotify{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    background: hsl(156, 100%, 50%);
+    background: hsl(0, 0%, 30%);
+    // border-width: 0 0 1px 0;
+    // border-color: hsl(0, 0%, 30%);
+    // border-style: solid;
+    color: white;
+    border-radius: 15px;
+}
+.artists__already-followed{
+    height: fit-content;
+    width: 100%;
+    box-sizing: border-box;
+}
+.artists__followed-artist{
+    height: fit-content;
+    padding: 30px 0 0 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    box-sizing: border-box;
+    // border-width: 0 0 1px 0;
+    // border-color: hsl(0, 0%, 30%);
+    // border-style: solid;
+    color: white;
+}
+.artists__artist-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.artists__artist-name{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.artists__artist-followed-since{
+    font-size: 14px;
+}
+.artists__artist-number{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 20px;
+}
+.artists__artist-image{
+    height: 100px;
+    width: 100px;
+    background: url("https://yt3.ggpht.com/ytc/AAUvwng5YKqqs6nOIMUif5qjH8C9CClImN1NigcDVKrZ-Q=s900-c-k-c0x00ffffff-no-rj") no-repeat center;
+    background-size: cover;
+    margin-right: 15px;
+}
+.artists__artist-unfollow{
+    height: 30px;
+    width: fit-content;
+    padding: 0 15px;
+    color: white;
+    font-size: 12px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    color: hsl(156, 100%, 50%);
+    border-width: 2px;
+    border-style: solid;
+    border-color: hsl(156, 100%, 50%);
+}

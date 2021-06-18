@@ -1,0 +1,100 @@
+.navigation{
+    height: 100vh;
+    width: 110px;
+    // border-width: 0 1px 0 0;
+    // border-style: solid;
+    // border-color: hsl(0, 0%, 30%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px 30px;
+}
+.navigation__avatar{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border-width: 0 0 1px 0;
+    // border-style: solid;
+    // border-color: hsl(0, 0%, 30%);
+    box-sizing: border-box;
+    background: hsl(0, 0%, 30%);
+    border-radius: 15px;
+    transition: all .5s ease-in-out;
+    position: relative;
+}
+.navigation__avatar:hover{
+    background: hsl(0, 0%, 50%);
+}
+.navigation__avatar-alerts{
+    height: 24px;
+    width: fit-content;
+    padding: 0 8px;
+    border-radius: 12px;
+    position: absolute;
+    bottom: -14px;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:hsl(48, 100%, 50%);
+    color: hsl(48, 100%, 20%);
+}
+.navigation__tab{
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+.navigation__tab div{
+    background: hsl(156, 100%, 50%);
+    background: #fc00ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00dbde, #fc00ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #00dbde,
+        #fc00ff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.navigation__tab--concerts div{
+    height: 50px;
+    width: 50px;
+    mask: url("../assets/event_black_24dp.svg") no-repeat center;
+    mask-size: 30px 30px;
+}
+.navigation__tab--artists div{
+    height: 50px;
+    width: 50px;
+    mask: url("../assets/album_black_24dp.svg") no-repeat center;
+    mask-size: 30px 30px;
+}
+.navigation__tab--finder div{
+    height: 50px;
+    width: 50px;
+    mask: url("../assets/tune_black_24dp.svg") no-repeat center;
+    mask-size: 30px 30px;
+}
+.active > .navigation__tab{
+    background: #fc00ff; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00dbde, #fc00ff); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #00dbde,
+        #fc00ff
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.active > .navigation__tab div{
+    background: white;
+}
+.navigation__tab--selected{
+
+}
+.navigation__tab--selected div{
+
+}

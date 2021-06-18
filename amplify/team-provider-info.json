@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bandtrackerfrontend-dev-135446-authRole",
+      "UnauthRoleArn": "arn:aws:iam::240609057660:role/amplify-bandtrackerfrontend-dev-135446-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::240609057660:role/amplify-bandtrackerfrontend-dev-135446-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-bandtrackerfrontend-dev-135446-deployment",
+      "UnauthRoleName": "amplify-bandtrackerfrontend-dev-135446-unauthRole",
+      "StackName": "amplify-bandtrackerfrontend-dev-135446",
+      "StackId": "arn:aws:cloudformation:us-east-2:240609057660:stack/amplify-bandtrackerfrontend-dev-135446/7d702a10-cf9d-11eb-9df2-0ab1896f315e",
+      "AmplifyAppId": "dyodknt92jj1c"
+    },
+    "categories": {
+      "auth": {
+        "bandtrackerfrontend5171656f": {}
+      }
+    }
+  }
+}
