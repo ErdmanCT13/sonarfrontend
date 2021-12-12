@@ -1,0 +1,190 @@
+.nearby-shows {
+    flex: 1;
+    background: hsl(0, 0%, 15%);
+    display: flex;
+    flex-direction: column;
+}
+.nearby-shows__header {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    background: hsl(0, 0%, 15%);
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: hsl(0, 0%, 20%);
+}
+.nearby-shows__grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: min-content;
+    grid-gap: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.nearby-shows__banner {
+    grid-column: 1 / span 2;
+    background: #4776e6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8e54e9, #4776e6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #8e54e9,
+        #4776e6
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 5px;
+
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+
+    span {
+        font-weight: bold;
+        color: hsl(156, 100%, 60%);
+    }
+
+    .nearby-shows__banner-icon {
+        height: 80px;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: hsla(0, 0%, 100%, 0.5);
+        border-radius: 50%;
+        margin-top: 30px;
+
+        &::after {
+            content: "";
+            height: 50px;
+            width: 50px;
+            mask: url("../assets/event_black_24dp.svg") no-repeat center;
+            mask-size: 50px 50px;
+            background: white;
+        }
+    }
+}
+.nearby-shows__show {
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    background: hsl(0, 0%, 15%);
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    // background: #ff9966; /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #ff5e62, #ff9966); /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(
+    //     to right,
+    //     #ff5e62,
+    //     #ff9966
+    // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.nearby-shows__show-tickets{
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: hsla(0, 0%, 100%, 0.5);
+    margin-top: 15px;
+    position: absolute;
+    left: 30px;
+
+    &::after{
+        content: "";
+        height: 20px;
+        width: 20px;
+        background: white;
+        mask: url("../assets/open_in_new_black_24dp.svg") no-repeat center;
+        mask-size: 20px 20px;
+    }
+}
+.nearby-shows__show-inner {
+    position: relative;
+    padding-bottom: 100%;
+
+    &::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background: hsla(0, 0%, 10%, 0.5);
+        z-index: 2;
+        position: absolute;
+        transition: all 0.2s linear;
+    }
+    &:hover::after {
+        background: hsla(0, 0%, 10%, 0.2);
+    }
+    &:hover {
+        .artist-2__name {
+            color: hsl(156, 100%, 70%);
+        }
+    }
+    img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: auto;
+        width: 100%;
+        z-index: 0;
+    }
+}
+.nearby-shows__show-content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 30px;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.nearby-shows__show-header {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.nearby-shows__show-location {
+    font-size: 14px;
+    // display:  flex;
+    // align-items: center;
+    margin-bottom: 15px;
+    // padding-bottom: 15px;
+    // border-width: 0 0 1px 0;
+    // border-color: hsla(0, 0%, 100%, 0.3);
+    // border-style: solid;
+
+    // &::before{
+    //     flex-shrink: 0;
+    //     content: "";
+    //     height: 20px;
+    //     width: 20px;
+    //     background: white;
+    //     mask: url("../assets/map_black_24dp.svg") no-repeat center;
+    //     mask-size: 20px 20px;
+    //     margin-right: 15px;
+    // }
+    span{
+        font-weight: bold;
+        color:hsl(156, 100%, 60%);
+    }
+}
+.nearby-shows__show-date {
+    height: 30px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    background: hsla(0, 0%, 100%, 0.2);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}

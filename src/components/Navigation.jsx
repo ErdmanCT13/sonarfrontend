@@ -2,6 +2,7 @@ import "./Navigation.scss"
 import { useState } from "react"
 import Avatar from "boring-avatars"
 import React from "react";
+import { useSelector } from "react-redux"
 import {
     BrowserRouter as Router,
     Switch,
@@ -13,6 +14,9 @@ import {
 
 
 export default function Navigation() {
+
+    var nearbyShows = useSelector(state => state.nearbyShows)
+
     return (
         <div className="navigation">
             <div className="navigation__avatar">
@@ -22,7 +26,7 @@ export default function Navigation() {
                     variant="marble"
                     colors={["hsl(156, 100%, 50%)", "#6666ff", "hsl(156, 100%, 30%)", "hsl(0, 0%, 90%)", "hsl(0, 0%, 40%)"]}
                 ></Avatar>
-                <div className="navigation__avatar-alerts">12</div>
+                <div className="navigation__avatar-alerts">{nearbyShows.length}</div>
             </div>
             <NavLink activeClassName="active" to="/shows">
                 <div className="navigation__tab navigation__tab--concerts"><div></div></div>

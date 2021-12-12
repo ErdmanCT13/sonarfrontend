@@ -42,19 +42,19 @@
 }
 .show-finder__column {
     height: 100%;
-    width: 330px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     
 }
 .show-finder__pins {
-    padding: 30px 15px;
     flex: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     overflow: auto;
+    background:hsl(0, 0%, 15%);
 
 }
 .show-finder__pins:empty{
@@ -88,31 +88,28 @@
     // border-width: 0 0 1px 0;
     // border-style: solid;
     // border-color: hsl(0, 0%, 30%);
-    border-radius: 10px;
     background: hsl(0, 0%, 15%);
-    margin-bottom: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
+    // box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .show-finder__pin:hover {
 
     background: hsl(0, 0%, 10%);
     
-    .show-finder__delete-pin{
-        background:hsl(0, 100%, 70%);
-        color: hsl(0, 100%, 90%);
-    }
-    .show-finder__edit-pin{
-        background: hsl(156, 100%, 50%);
-        color: hsl(156, 100%, 20%)
-    }
+    // .show-finder__delete-pin{
+    //     color: hsla(336, 100%, 70%, 1);
+    //     background: hsla(336, 100%, 70%, 0.2);
+    // }
+    // .show-finder__edit-pin{
+    //     color: hsl(156, 100%, 70%);
+    //     background: hsla(156, 100%, 70%, .2);
+    // }
     .show-finder__delete-pin:hover{
-        background: transparent;
-        color: hsl(0, 100%, 70%)
+        color: hsla(336, 100%, 50%, 1);
+        background: hsla(336, 100%, 70%, 0.1);
     }
     .show-finder__edit-pin:hover{
-        background: transparent;
         color: hsl(156, 100%, 50%);
+        background: hsla(156, 100%, 70%, .1);
     }
 }
 .show-finder__pin-header {
@@ -153,28 +150,30 @@
     margin-top: 30px;
 }
 .show-finder__edit-pin {
-    height: 30px;
+    height: 50px;
     width: fit-content;
-    padding: 0 15px;
-    color: hsl(156, 100%, 50%);
+    padding: 0 30px;
+    color: hsl(156, 100%, 60%);
+    background: hsla(156, 100%, 50%, .2);
     margin-right: 15px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: hsl(156, 100%, 50%);
+    // border-width: 3px;
+    // border-style: solid;
+    // border-color: hsl(156, 100%, 50%);
     display: flex;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 .show-finder__delete-pin {
-    height: 30px;
+    height: 50px;
     width: fit-content;
-    padding: 0 15px;
-    color: hsl(0, 100%, 70%);
+    padding: 0 30px;
+    color: hsla(336, 100%, 50%, 1);
+    background: hsla(336, 100%, 50%, 0.2);
     margin-right: 15px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: hsl(0, 100%, 70%);
+    // border-width: 3px;
+    // border-style: solid;
+    // border-color: hsl(0, 100%, 70%);
     display: flex;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 25px;
 }

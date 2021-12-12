@@ -2,7 +2,8 @@ export default function pinnedlocationsReducer(state = [], action) {
     switch (action.type) {
         case "SAVE_LOCATION":
             console.log("SAVING LOCATION", action.location)
-            return [...state, action.location]
+            //return [...state, action.location]
+            return action.location instanceof Array ? [...state, ...action.location] : [...state, action.location]
         case "REMOVE_LOCATION":
             return state.filter((location) => {
                 console.log(location.locationId, action.location.locationId)

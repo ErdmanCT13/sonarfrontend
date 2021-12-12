@@ -1,56 +1,187 @@
-.artists{
+.artists {
     height: 100vh;
     flex: 1;
     box-sizing: border-box;
-    padding: 30px;
+    padding-top: 0px;
+    overflow: scroll;
     // background-image: linear-gradient(to bottom, #333333, hsla(156, 100%, 50%, .1));
 }
-.artists__search-spotify{
+.artists__header {
+    position: relative;
+    z-index: 10;
+    height: 110px;
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    position: sticky;
+    background: hsl(0, 0%, 20%);
+    top: 0px;
+    // box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+
+    a{
+        margin-left: auto;
+    }
+}
+.artists__link-spotify-account{
+    background: hsla(156, 100%, 50%, .2);
+    background: white;
+    background:hsl(0, 0%, 10%);
+    padding: 0 15px;
+    color:hsl(156, 100%, 60%);
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+
+    img{
+        margin-left: 30px;
+        image-rendering: crisp-edges;
+        height: 30px;
+        width: auto;
+    }
+}
+.artists__search-spotify {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
     width: 100%;
+    max-width: 500px;
+    padding: 0 30px;
     box-sizing: border-box;
     background: hsl(156, 100%, 50%);
-    background: hsl(0, 0%, 30%);
+    background: white;
+
     // border-width: 0 0 1px 0;
     // border-color: hsl(0, 0%, 30%);
     // border-style: solid;
     color: white;
     border-radius: 15px;
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+
+    input {
+        height: 100%;
+        flex: 1;
+        background: none;
+        outline: none;
+        border: none;
+        color: black;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &::after {
+        content: "";
+        height: 30px;
+        width: 30px;
+        background: url("../assets/iconfinder_621252_rounded_spotify_icon_256px.png") no-repeat center;
+        background-size: 30px 30px;
+        margin-left: 30px;
+    }
 }
-.artists__already-followed{
+.artists__section{
     height: fit-content;
+    width: 100%;
+    // padding: 30px;
+    box-sizing: border-box;
+
+    // background: hsl(0, 0%, 5%);
+}
+.artists__section-header{
+    font-size: 50px;
+    padding: 30px 30px;
+    box-sizing: border-box;
+    font-weight: 600;
+    color: white;
+    
+    // font-family: 'Poppins', sans-serif;
+
+    span{
+        color: hsl(156, 100%, 50%);
+        // padding: 0 15px;
+        // border-radius: 15px;
+        // background: hsla(156, 100%, 50%, .2);
+
+        &:empty{
+            display: none;
+        }
+    }
+}
+.artists__already-followed {
+    border-radius: 15px;
+    height: 100%;
     width: 100%;
     box-sizing: border-box;
+    display: grid;
+    grid-gap: 15px;
+    padding: 15px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    // background: hsl(0, 0%, 15%);
+    position: relative;
+
+    div{
+        position: relative;
+        padding-bottom: 100%;
+        width: 100%;
+        overflow: hidden;
+
+        img{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: auto;
+            width: 100%;
+        }
+
+    }
+
 }
-.artists__followed-artist{
+.artists__followed-artist {
+    overflow: hidden;
     height: fit-content;
-    padding: 30px 0 0 0;
-    width: 100%;
     display: flex;
     align-items: center;
-    // justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 15px;
     box-sizing: border-box;
-    // border-width: 0 0 1px 0;
-    // border-color: hsl(0, 0%, 30%);
-    // border-style: solid;
+    background: hsl(0, 0%, 10%);
     color: white;
+    transition: all 0.2s linear;
+    padding: 15px;
 }
-.artists__artist-info{
+.artists__followed-artist:hover {
+    background: hsl(0, 0%, 15%);
+}
+.artists__content-row {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.artists__artist-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 70%;
 }
-.artists__artist-name{
+.artists__artist-name {
     font-size: 20px;
-    margin-bottom: 15px;
+    font-weight: bold;
+
 }
-.artists__artist-followed-since{
+.artists__artist-followed-since {
     font-size: 14px;
+    color: hsl(0, 0%, 80%);
 }
-.artists__artist-number{
+.artists__artist-number {
     height: 100px;
     width: 100px;
     display: flex;
@@ -58,26 +189,270 @@
     align-items: center;
     font-weight: 800;
     font-size: 20px;
+    display: none;
 }
-.artists__artist-image{
-    height: 100px;
-    width: 100px;
-    background: url("https://yt3.ggpht.com/ytc/AAUvwng5YKqqs6nOIMUif5qjH8C9CClImN1NigcDVKrZ-Q=s900-c-k-c0x00ffffff-no-rj") no-repeat center;
+.artists__artist-image {
+
+    // background: url("https://yt3.ggpht.com/ytc/AAUvwng5YKqqs6nOIMUif5qjH8C9CClImN1NigcDVKrZ-Q=s900-c-k-c0x00ffffff-no-rj")
+    //     no-repeat center;
     background-size: cover;
-    margin-right: 15px;
+    border-radius: 10px;
+    margin-right: 30px;
+
+    img{
+        height: 110px;
+        border-radius: 50%;
+        width: 110px;
+
+    }
+
+    div{
+        height: 110px;
+        width: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: hsl(0, 0%, 20%);
+        border-radius: 50%;
+        
+
+        &::after{
+            content: "";
+            height: 40px;
+            width: 40px;
+            background: white;
+            mask: url("../assets/music_note_black_24dp.svg") no-repeat center;
+            mask-size: 40px 40px;
+        }
+    }
+
 }
-.artists__artist-unfollow{
-    height: 30px;
+.artists__artist-controls{
+    height: 110px;
     width: fit-content;
-    padding: 0 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.artists__artist-followed-button{
+    height: 45px;
+    width: 45px;
+    box-sizing: border-box;
     color: white;
     font-size: 12px;
-    border-radius: 15px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    margin-left: auto;
-    color: hsl(156, 100%, 50%);
-    border-width: 2px;
-    border-style: solid;
-    border-color: hsl(156, 100%, 50%);
+    justify-content: center;
+    background: hsla(156, 100%, 50%, .2);
+    // border-width: 2px;
+    // border-style: solid;
+    // border-color: hsl(156, 100%, 50%);
+    color: hsl(156, 100%, 10%);
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+
+
+    &:hover {
+        background: hsl(156, 100%, 60%);
+        background: white;
+    }
+
+    &:hover::after{
+        background: black;
+    }
+
+    &::after{
+        content: "";
+        height: 20px;
+        width: 20px;
+        mask: url("../assets/favorite_black_24dp.svg") no-repeat center;
+        mask-size: 20px 20px;
+        background:hsl(156, 100%, 60%);
+    }
 }
+
+.artists__artist-followed-button--followed {
+    height: 45px;
+    width: 45px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsla(336, 100%, 50%, .2);
+    // border-width: 2px;
+    // border-style: solid;
+    // border-color: hsl(156, 100%, 50%);
+    color: hsla(156, 100%, 10%, .2);
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+
+
+    &:hover {
+        background: hsl(156, 100%, 60%);
+        background: white;
+    }
+
+    &:hover::after{
+        background: hsla(336, 100%, 50%, 1);
+    }
+
+    &::after{
+        content: "";
+        height: 20px;
+        width: 20px;
+        mask: url("../assets/favorite_black_24dp.svg") no-repeat center;
+        mask-size: 20px 20px;
+        background: hsla(336, 100%, 50%, 1);
+        fill: transparent;
+    }
+}
+
+
+
+.artists__artist-listen{
+    height: 45px;
+    width: 45px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(156, 100%, 50%);
+    background: hsla(156, 100%, 50%, .2);
+    // border-width: 2px;
+    // border-style: solid;
+    // border-color: hsl(156, 100%, 50%);
+    color: hsl(156, 100%, 10%);
+    font-weight: bold;
+    font-size: 20px;
+
+
+    &:hover {
+        background: hsl(156, 100%, 60%);
+        background: white;
+    }
+
+    &:hover::after{
+        background: black;
+    }
+
+    &::after{
+        content: "";
+        height: 20px;
+        width: 20px;
+        mask: url("../assets/headphones_black_24dp.svg") no-repeat center;
+        mask-size: 20px 20px;
+        background:hsl(156, 100%, 60%);
+    }
+}
+
+@media only screen and (max-width: 2000px) {
+    .artists__already-followed {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .artists__already-followed {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .artists__already-followed {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (max-width: 1000px) {
+
+    // .artists__section-header{
+    //     font-size: 20px;
+    // }
+    // .artists__header {
+    //     height: 80px;
+    //     width: 100%;
+    //     padding: 15px;
+    //     box-sizing: border-box;
+    //     display: flex;
+    //     align-items: center;
+    //     // justify-content: center;
+    //     position: sticky;
+    //     background: hsl(0, 0%, 15%);
+    //     top: 0px;
+    //     // box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+
+    // }
+    // .artists__followed-artist{
+    //     background: none;
+    //     border-radius: 0;
+    //     padding: 0;
+    // }
+    // .artists__search-spotify{
+    //     width: 100%;
+    //     max-width: 100%;
+    // }
+    .artists__already-followed {
+
+        background: none;
+        padding: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+    // .artists__artist-name {
+    //     font-size: 12px;
+    //     font-weight: bold;
+    //     width: fit-content;
+    // }
+    // .artists__artist-image {
+    //     height: 50px;
+    //     width: 50px;
+    //     // border-radius: 50%;
+
+    //     img{
+    //         height: 50px;
+    //         width: 50px;
+    //         border-radius: 0;
+    //     }
+
+    //     div{
+    //         height: 50px;
+    //         width: 50px;
+    //     }
+    // }
+    // .artists__artist-controls{
+    //     height: fit-content;
+    //     display: flex;
+    //     flex-direction: row;
+    // }
+    // .artists__artist-unfollow{
+    //     font-size: 14px;
+    //     margin: 0;
+    //     margin-right: 10px;
+    //     background: none;
+    // }
+    // .artists__artist-listen{
+    //     background: none;
+    //     margin: 0
+    // }
+}
+// @media only screen and (max-width: 500px) {
+//     .artists__already-followed {
+//         grid-template-columns: repeat(1, 1fr);
+//     }
+//     .artists__content-row {
+//         padding: 0px;
+//         margin-bottom: 0;
+//     }
+// }
